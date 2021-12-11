@@ -51,5 +51,5 @@ const runB = async (input) => {
 
 const input = getInput();
 
-runA(input).then(console.log);
-runB(input).then(console.log);
+runA([...input]).then(console.log);
+runB([...input]).then(console.log);

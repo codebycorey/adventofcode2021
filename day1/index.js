@@ -8,9 +8,7 @@ const getInput = () => {
     .map(Number);
 };
 
-const runA = async () => {
-  const input = getInput();
-
+const runA = async (input) => {
   let increased = 0;
 
   for (let i = 1; i < input.length; i++) {
@@ -22,9 +20,7 @@ const runA = async () => {
   return increased;
 };
 
-const runB = async () => {
-  const input = getInput();
-
+const runB = async (input) => {
   let increased = 0;
 
   for (let i = 0; i < input.length - 3; i++) {
@@ -39,5 +35,7 @@ const runB = async () => {
   return increased;
 };
 
-runA().then(console.log);
-runB().then(console.log);
+const input = getInput();
+
+runA([...input]).then(console.log);
+runB([...input]).then(console.log);
